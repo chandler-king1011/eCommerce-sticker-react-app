@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { Router, Switch, Route } from "react-router-dom";
 
 
@@ -13,7 +13,7 @@ import history from './history';
 import "./style/main.scss";
 
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware()(compose((window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => F)(createStore)));
 
 
 
@@ -24,6 +24,8 @@ function main() {
         <Router history={history}>
             <Switch>
               <Route path='/' exact component={SignIn} />
+              <Route path='/signin' component={SignIn} />
+              <Route path='/signup' component={SignUp} />
             </Switch>
         </Router>
       </Layout>
