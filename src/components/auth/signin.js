@@ -7,7 +7,10 @@ class SignIn extends Component {
 
   onSubmit = (field) => {
       field.preventDefault();
-      console.log(field);
+      const fields = {};
+      fields.email = field.target.children[0].children[1].value;
+      fields.password = field.target.children[1].children[1].value;
+      console.log(fields);
   }
 
   render() {
