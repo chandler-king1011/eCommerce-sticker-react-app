@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import SignInForm from './signinForm';
+import pageTitle from '../pageTitle';
 
 
 class SignIn extends Component {
@@ -16,6 +17,7 @@ class SignIn extends Component {
   render() {
     return(
         <div className="sign-in">
+            {pageTitle("sign-in__page-title", "Login")}
             <SignInForm handleSubmit={this.onSubmit} className='sign-in__form' />
         </div>
     )
