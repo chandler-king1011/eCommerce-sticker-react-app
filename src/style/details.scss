@@ -7,11 +7,17 @@
     padding-bottom: 7px;
     border-bottom: 1px solid #ccc;
 }
+
+
     &__links {
         font-size: 14px;
         display: grid;
         grid-row-gap: 10px;
         text-decoration: underline;
         cursor: pointer;
+    }
+
+    &__items{
+        text-decoration: none;
     }
 }
