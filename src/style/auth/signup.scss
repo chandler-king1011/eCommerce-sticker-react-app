@@ -1,4 +1,59 @@
 .sign-up {
     grid-row: content-s/content-e;
     grid-column: s/e;
+
+    &__form {
+        display: grid;
+        grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 200px) [border-s] 2px [border-e create-s] 38px [create-e];
+        grid-template-columns: 1fr;
+        grid-row-gap: 15px;
+    }
+}
+
+.sign-up-form {
+    & > * {
+        grid-column: 1/-1;
+    }
+
+    &__name {
+        grid-row: name-s/name-e;
+    }
+
+    &__email {
+        grid-row: email-s/email-e;
+
+    }
+    &__password {
+        margin-top: 35px;
+        grid-row: password-s/password-e;
+    }
+
+   
+    &__confirm {
+        margin-top: 35px;
+        grid-row: confirm-s/confirm-e;
+    }
+
+
+    &__border {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 39px;
+    }
+
+    
+    &__details {
+        grid-row: 1/-1;
+        justify-self: end;
+        align-self: start;
+    }
+
+
+}
+
+.sign-up-form__buttons {
+    display: flex;
+
+    .sign-up-form__back {
+        margin-right: 30px; 
+    }
 }
