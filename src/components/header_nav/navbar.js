@@ -4,16 +4,13 @@ import { connect } from 'react-redux';
 
 class Navbar extends Component {
 
-  //componentWillMount() {
-  //  this.props.getNavLinks();
- // }
 
   render() {
     return(
         <div className='navbar'>
             {this.props.navbarLinks.map((link, index) => {
               return (
-            <a className='navbar__link' key={index} onClick={() => console.log("trying to switch tab")}>{link.title}</a>
+            <a className = {`navbar__links ${link.active ? "link__active" : ""}`} key={index} onClick={() => console.log("trying to switch tab")}>{link.title}</a>
               )
             })}
         </div>

@@ -1,3 +1,5 @@
+.link__active { color: #00cb79;
+}
 .navbar {
     grid-row: navbar-s/navbar-e;
     grid-column: 1/-1;
@@ -11,12 +13,6 @@
     color: #E6E6E6;
     font-size: 18px;
     font-weight: normal;
-
-    &__link:active {
-        color: #00cb79;
-    
-    }
-
     
 
     & > * {
