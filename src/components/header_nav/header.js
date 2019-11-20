@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import history from '../../history';
+
 
 
 class Header extends Component {
@@ -12,7 +14,7 @@ class Header extends Component {
             <div className="header__links">
                 {this.props.headerLinks.map((link, index) => {
                     return (
-                    <a className="header__link" key={index}>{link.title}</a>
+                    <a className="header__link" key={index} onClick={() => history.push(link.path)}>{link.title}</a>
                     )
                 })}
             </div>

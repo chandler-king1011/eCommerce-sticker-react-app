@@ -23,8 +23,16 @@ class Account extends Component {
         },
       ];
       const headerLinks = [
-          {title: "Shop"},
-          {title: "Logout"}
+        {
+            id: 0,
+            title: "Shop",
+            path: "/shop"
+        },
+        {
+            id: 1,
+            title: "Logout",
+            path: "/"
+        }
     ]
       this.props.setHeaderLinks(headerLinks);
       this.props.setNavbarLinks(navbarLinks);
