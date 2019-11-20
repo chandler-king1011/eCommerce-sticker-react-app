@@ -3,4 +3,24 @@
     grid-column: 1/-1;
     background-color: $nav-black;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 40px;
+    color: #E6E6E6;
+    font-size: 18px;
+    font-weight: normal;
+
+    &__link:active {
+        color: #00cb79;
+    
+     
+    }
+
+    
+
+    & > * {
+        grid-row: s/e;
+    }
 }
