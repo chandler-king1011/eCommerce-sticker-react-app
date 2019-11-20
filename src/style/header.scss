@@ -8,6 +8,7 @@
     grid-template-columns: [img-s] 1fr [img-e links-s] 1fr [links-e];
 
     &__links {
+        cursor: pointer;
         color: #333;
         font-size: 16px;
         margin-right: 47px;

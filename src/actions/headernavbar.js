@@ -1,4 +1,4 @@
-import { SET_HEADER_LINKS, SET_NAVBAR_LINKS } from './types';
+import { SET_HEADER_LINKS, SET_NAVBAR_LINKS, CHANGE_NAVBAR_ACTIVE } from './types';
 
 export function setHeaderLinks(links) {
     return ({
@@ -13,3 +13,10 @@ export function setNavbarLinks(links) {
         payload: links
     })
 };
+
+export function changeNavbarActive(id) {
+    return ({
+        type: CHANGE_NAVBAR_ACTIVE,
+        payload: id
+    })
+}
