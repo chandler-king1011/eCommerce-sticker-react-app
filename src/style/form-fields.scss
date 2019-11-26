@@ -41,6 +41,11 @@
             width: 137px;
         }
 
+        &__long-gray {
+            background: #999;
+            transform: translateY(38px);
+        }
+
         &:focus {
             outline: none;
         }

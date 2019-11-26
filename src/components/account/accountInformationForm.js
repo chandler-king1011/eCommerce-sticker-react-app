@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { reduxForm, Field} from 'redux-form';
 
-import { FormInput, FormButton } from '../formFields';
+import { FormInput, FormButton, LongGrayButton } from '../formFields';
 import history from '../../history';
 
 class AccountInformationForm extends Component {
+
+
   render() {
     const { className, handleSubmit} = this.props;
     return(
@@ -12,6 +14,7 @@ class AccountInformationForm extends Component {
             <div className="account-info-form__column-one">
                 <Field className="account-info-form__name" name="name" type="name" title="Name" placeholder="Name" component={FormInput} />
                 <Field className="account-info-form__email" name="email" type="email" title="Email" placeholder="Email" component={FormInput} />
+                <Field className="account-info-form__change-password" name="change-password" type="button" title="Change Password" long={true} component={LongGrayButton} onClick={() => console.log("changin Password")} />
             </div>
             <div className="account-info-form__column-two">
                 <Field className="account-info-form__street" name="street" type="street" title="Street Address" placeholder="Street Address" component={FormInput} />
@@ -22,8 +25,6 @@ class AccountInformationForm extends Component {
                 </div>
             </div>
             
-            
-    {/*<Field className="sign-in-form__login" name="login" type="submit" title="Login" component={FormButton} onClick={() => history.push('./account')} /> */}
         </form>
     )
 }
