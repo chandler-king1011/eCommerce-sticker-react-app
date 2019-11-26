@@ -5,6 +5,21 @@ import { FormInput, FormButton, LongGrayButton } from '../formFields';
 import history from '../../history';
 
 class AccountInformationForm extends Component {
+  constructor() {
+      super();
+
+      this.state = {
+          changePassword: false
+      };
+
+      this.updatePassword = this.updatePassword.bind(this);
+  }
+
+  updatePassword() {
+      this.setState({
+          changePassword: true
+      });
+  }
 
 
   render() {
@@ -14,7 +29,16 @@ class AccountInformationForm extends Component {
             <div className="account-info-form__column-one">
                 <Field className="account-info-form__name" name="name" type="name" title="Name" placeholder="Name" component={FormInput} />
                 <Field className="account-info-form__email" name="email" type="email" title="Email" placeholder="Email" component={FormInput} />
-                <Field className="account-info-form__change-password" name="change-password" type="button" title="Change Password" long={true} component={LongGrayButton} onClick={() => console.log("changin Password")} />
+                {this.state.changePassword ?
+                <div className= "account-info-form__change-password-fields">
+                    <div className= "account-info-form__spacer"></div>
+                    <Field className="account-info-form__current-password" name="current-password" type="password" title="Current Password" placeholder="Current Password" component={FormInput} />
+                    <Field className="account-info-form__new-password" name="new-password" type="password" title="New Password" placeholder="New Password" component={FormInput} />
+                    <Field className="account-info-form__confirm-password" name="confirm-password" type="password" title="Confirm Password" placeholder="Confirm Password" component={FormInput} />
+                </div>
+                :
+                <Field className="account-info-form__change-password" name="change-password" type="button" title="Change Password" long={true} component={LongGrayButton} onClick={() => this.updatePassword()} />
+                }
             </div>
             <div className="account-info-form__column-two">
                 <Field className="account-info-form__street" name="street" type="street" title="Street Address" placeholder="Street Address" component={FormInput} />
