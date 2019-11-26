@@ -1,0 +1,24 @@
+.account-info__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+
+    & * input {
+        margin-bottom: 15px;
+    }
+
+    .account-info-form__state-zipcode {
+        display: flex;
+        justify-content: space-between;
+        width: 426px;
+
+        
+        .account-info-form__state input {
+            width: 200px;
+        }
+        .account-info-form__zipcode input {
+            width: 200px;  
+        }
+    }
+    
+}

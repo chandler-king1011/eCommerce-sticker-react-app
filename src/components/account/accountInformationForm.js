@@ -8,11 +8,22 @@ class AccountInformationForm extends Component {
   render() {
     const { className, handleSubmit} = this.props;
     return(
-        <form className={`${className} sign-in__form`} onSubmit={handleSubmit}>
-            <Field className="sign-in-form__email" name="email" type="email" title="Email" placeholder="Email" component={FormInput} />
-            <Field className="sign-in-form__password" name="password" type="password" title="Password" placeholder="Password" component={FormInput} />
-            <div className="sign-in-form__border"></div>
-            <Field className="sign-in-form__login" name="login" type="submit" title="Login" component={FormButton} onClick={() => history.push('./account')} />
+        <form className={`${className} account-info__form`} onSubmit={handleSubmit}>
+            <div className="account-info-form__column-one">
+                <Field className="account-info-form__name" name="name" type="name" title="Name" placeholder="Name" component={FormInput} />
+                <Field className="account-info-form__email" name="email" type="email" title="Email" placeholder="Email" component={FormInput} />
+            </div>
+            <div className="account-info-form__column-two">
+                <Field className="account-info-form__street" name="street" type="street" title="Street Address" placeholder="Street Address" component={FormInput} />
+                <Field className="account-info-form__city" name="city" type="city" title="City" placeholder="City" component={FormInput} />
+                <div className="account-info-form__state-zipcode">
+                    <Field className="account-info-form__state" name="state" type="state" title="State" placeholder="State" component={FormInput} />
+                    <Field className="account-info-form__zipcode" name="zipcode" type="zipcode" title="Zipcode" placeholder="Zipcode" component={FormInput} />
+                </div>
+            </div>
+            
+            
+    {/*<Field className="sign-in-form__login" name="login" type="submit" title="Login" component={FormButton} onClick={() => history.push('./account')} /> */}
         </form>
     )
 }
