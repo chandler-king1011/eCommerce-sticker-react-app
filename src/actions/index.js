@@ -7,11 +7,13 @@ import {
     fetchUserPurchases,
     fetchPurchaseDetails
 } from './user';
+import { fetchShopCategories } from './shop';
 
 export {
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive,
     fetchUserPurchases,
-    fetchPurchaseDetails
+    fetchPurchaseDetails,
+    fetchShopCategories
 }
