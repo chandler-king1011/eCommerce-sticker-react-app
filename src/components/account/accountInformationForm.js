@@ -35,6 +35,11 @@ class AccountInformationForm extends Component {
                     <Field className="account-info-form__current-password" name="current-password" type="password" title="Current Password" placeholder="Current Password" component={FormInput} />
                     <Field className="account-info-form__new-password" name="new-password" type="password" title="New Password" placeholder="New Password" component={FormInput} />
                     <Field className="account-info-form__confirm-password" name="confirm-password" type="password" title="Confirm Password" placeholder="Confirm Password" component={FormInput} />
+                    <div className="account-info-form__border"></div>
+                    <div className="account-info-form__change-pw-buttons">
+                        <Field className="account-info-form__cancel" name="cancel" type="button" title="Cancel" component={FormButton} onClick={() => this.setState({ changePassword: false})} gray={true} />
+                        <Field className="account-info-form__update" name="update" type="submit" title="Update Information" component={FormButton} onClick={() => {console.log("changed password")}} />
+                    </div>
                 </div>
                 :
                 <Field className="account-info-form__change-password" name="change-password" type="button" title="Change Password" long={true} component={LongGrayButton} onClick={() => this.updatePassword()} />
@@ -48,7 +53,6 @@ class AccountInformationForm extends Component {
                     <Field className="account-info-form__zipcode" name="zipcode" type="zipcode" title="Zipcode" placeholder="Zipcode" component={FormInput} />
                 </div>
             </div>
-            
         </form>
     )
 }

@@ -7,6 +7,23 @@
         margin-bottom: 15px;
     }
 
+    .account-info-form__spacer {
+        height: 38px;
+    }
+
+    .account-info-form__change-pw-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 426px;
+
+    }
+
+    .account-info-form__border {
+        border-bottom: 1px solid #999;
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+
     .account-info-form__state-zipcode {
         display: flex;
         justify-content: space-between;
@@ -19,10 +36,6 @@
         .account-info-form__zipcode input {
             width: 200px;  
         }
-    }
-
-    .account-info-form__spacer {
-        height: 38px;
     }
     
 }
