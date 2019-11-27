@@ -8,6 +8,7 @@ import { Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/layout";
 import SignIn from "./components/auth/signin";
 import SignUp from "./components/auth/signup";
+import Shop from "./components/shop/shop";
 import Account from "./components/account/account";
 import reducers from "./reducers";
 import history from './history';
@@ -27,6 +28,7 @@ function main() {
               <Route path='/' exact component={SignIn} />
               <Route path='/signin' component={SignIn} />
               <Route path='/signup' component={SignUp} />
+              <Route path='/shop' component={Shop} />
               <Route path='/account' component={Account} />
             </Switch>
         </Router>
