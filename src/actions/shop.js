@@ -1,7 +1,6 @@
 import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY } from './types';
 
 export function filterProductsWithCategoryId(id) {
-    console.log(id);
     return({
         type: FILTER_PRODUCTS_BY_CATEGORY,
         payload: id
