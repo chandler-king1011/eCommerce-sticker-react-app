@@ -1,4 +1,4 @@
-import { SET_SHOP_PRODUCTS } from '../actions/types';
+import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY } from '../actions/types';
 
 const INITIAL_STATE = {
     categories: [],
@@ -14,6 +14,16 @@ export default function(state=INITIAL_STATE, action) {
                 ...state,
                 products: action.payload
         }
+        case SET_SHOP_CATEGORIES:
+            return{
+                ...state,
+                categories: action.payload
+            }
+        case FILTER_PRODUCTS_BY_CATEGORY:
+            console.log(action.payload);
+            return{
+                ...state,
+            }
             
         default: return state;
     }

@@ -6,13 +6,19 @@ import * as actions from '../../actions';
 
 class Navbar extends Component {
 
+handleOnClick = (link) => {
+    this.props.changeNavbarActive(link.id);
+    if (this.props.onClick) {
+      this.props.onClick(link.id);
+    }
+  }
 
   render() {
     return(
         <div className='navbar'>
             {this.props.navbarLinks.map((link, index) => {
               return (
-            <a className = {`navbar__links ${link.active ? "link__active" : ""}`} key={index} onClick={() => this.props.changeNavbarActive(link.id)}>{link.title}</a>
+            <a className = {`navbar__links ${link.active ? "link__active" : ""}`} key={index} onClick={() => this.handleOnClick(link)}>{link.title}</a>
               )
             })}
         </div>
@@ -20,9 +26,10 @@ class Navbar extends Component {
 }
 }
 function mapStateToProps(state) {
-  const { navbarLinks } = state.headerNavbar;
+  const { navbarLinks, onClick } = state.headerNavbar;
   return {
-    navbarLinks
+    navbarLinks,
+    onClick
   }
 }
 Navbar = connect(mapStateToProps, actions)(Navbar);
