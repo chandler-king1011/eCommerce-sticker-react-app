@@ -1,4 +1,4 @@
-import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY } from '../actions/types';
+import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY, FILTER_PRODUCTS_BY_QUERY  } from '../actions/types';
 
 const INITIAL_STATE = {
     categories: [],
@@ -23,6 +23,17 @@ export default function(state=INITIAL_STATE, action) {
             let filteredProducts = []; 
             state.products.map(product => {
                 if(product.belongsTo.includes(action.payload)) {
+                    filteredProducts.push(product);
+                }
+            });
+            return {
+                ...state,
+                filteredProducts
+            }
+        case FILTER_PRODUCTS_BY_QUERY: 
+            filteredProducts = []; 
+            state.products.map(product => {
+                if(product.title.toLowerCase().includes(action.payload.toLowerCase())) {
                     filteredProducts.push(product);
                 }
             });

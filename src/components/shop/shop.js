@@ -27,8 +27,8 @@ class Shop extends Component {
   }
 
   onSubmit = (fields) => {
-      console.log(fields.target[0].value);
       event.preventDefault();
+      this.props.filterProductsByQuery(fields.target[0].value);
   }
 
   render() {

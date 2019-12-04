@@ -1,4 +1,13 @@
-import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY } from './types';
+import { SET_SHOP_CATEGORIES, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_BY_CATEGORY, FILTER_PRODUCTS_BY_QUERY } from './types';
+
+
+export function filterProductsByQuery(query) {
+    return({
+        type: FILTER_PRODUCTS_BY_QUERY,
+        payload: query
+    })
+}
+
 
 export function filterProductsWithCategoryId(id) {
     return({
