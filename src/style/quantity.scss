@@ -1,0 +1,33 @@
+.quantity {
+    display: flex;
+    align-items: center;
+
+    &__count {
+        height: 44px;
+        width: 65px;
+        border: 1px solid #E6E6E6;
+        font-size: 23px;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__plus {
+        height: 21px;
+        width: 29px;
+        border: 1px solid #E6E6E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__minus {
+        height: 21px;
+        width: 29px;
+        border: 1px solid #E6E6E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
