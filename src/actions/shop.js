@@ -67,28 +67,28 @@ export function fetchShopProducts() {
                 id: 1,
                 title:"Graph Database",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
-                price: 1.99,
+                price: 1.19,
                 belongsTo: [0, 6]
             },
             {
                 id: 2,
                 title:"Full Stack Development",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
-                price: 1.99,
+                price: 1.25,
                 belongsTo: [0, 1, 4]
             },
             {
                 id: 3,
                 title:"User Interface Design",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
-                price: 1.99,
+                price: 5.00,
                 belongsTo: [0, 2]
             },
             {
                 id: 4,
                 title:"Javascript Development",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
-                price: 1.99,
+                price: 12.99,
                 belongsTo: [0, 1]
             },
             {
@@ -102,7 +102,7 @@ export function fetchShopProducts() {
                 id: 6,
                 title:"Advanced OOP",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
-                price: 1.99,
+                price: 2.19,
                 belongsTo: [0, 6]
             }
         ]

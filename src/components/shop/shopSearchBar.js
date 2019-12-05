@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {reduxForm, Field} from 'redux-form';
 
+
 function shopSearchForm(props) {
     const {className, placeHolder, input} = props;
     return(
