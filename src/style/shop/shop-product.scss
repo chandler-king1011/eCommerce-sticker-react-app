@@ -3,7 +3,16 @@
     width: 240px;
     background-color: white;
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    &__top {
+        margin: 20px 20px 0px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
     &__title {
         color: #00CB79;
         font-family: "Encode Sans Condensed";
@@ -15,6 +24,21 @@
         font-size: 13px;
         color: #333333;
     }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__button-wrapper {
+        margin-right: 10px;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__price-incrementor-wrapper {
+        margin-left: 10px;
+    }
+
     &__add-to-cart {
         height: 40px;
         width: 97px;

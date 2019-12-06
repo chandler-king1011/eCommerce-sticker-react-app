@@ -1,4 +1,24 @@
 .shop {
+    margin-top: 40px;
     grid-row: content-s/content-e;
     grid-column: s/e;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 60px;
+    justify-items: center;
+
+    .shop-search-bar {
+        justify-self: normal;
+    
+    
+    }
+    &__products {
+        width: minmax(100px, 1035px);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 60px;
+        grid-row-gap: 40px;
+    }
 }
+
+
