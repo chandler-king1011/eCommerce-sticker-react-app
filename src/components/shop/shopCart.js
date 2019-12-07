@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+import CartContent from './shopCartContent';
+
 
 function CartButton({className, icon}) {
     return (
@@ -11,11 +13,7 @@ function CartButton({className, icon}) {
     )
 }
 
-function CartContent({className}) {
-    return (
-        <div className={`${className} cart-content`}>Content</div>
-    )
-}
+
 
 class ShopCart extends Component {
     render() {
@@ -23,7 +21,7 @@ class ShopCart extends Component {
         return(
             <div className={`${className} shop-cart`}>
                 <CartButton className='shop-cart__toggle' icon={faTimes} />
-                <CartContent className='shop-cart__content' />
+                <CartContent className='shop-cart__content' products={[1, 2, 3]} />
             </div>
         )
     }
