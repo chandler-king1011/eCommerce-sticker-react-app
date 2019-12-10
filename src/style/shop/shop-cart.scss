@@ -51,7 +51,15 @@
 }
 
 .cart-footer {
+    height: 113px;
+    background-color: #1A1A1A;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     &__checkout {
+    margin-left: 50px;
     height: 38px;
     width: 183px;
     border-radius: 20px;
@@ -69,5 +77,22 @@
     &:focus {
         outline: none;
      }
+  }
+
+  .cart-footer__subtotal {
+      margin-right: 40px;
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .subtotal__label {
+        font-size: 18px;
+      }
+
+      .subtotal__price {
+          font-size: 18px;
+          color: white;
+          font-weight: 600;
+      }
   }
 }

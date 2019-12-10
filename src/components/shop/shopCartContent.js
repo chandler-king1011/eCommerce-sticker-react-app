@@ -6,8 +6,10 @@ function CartFooter({className ,products}) {
     return (
         <div className={`${className} cart-footer`}>
             <button className='cart-footer__checkout'>Checkout</button>
-            <div classname='cart-footer__subtotal'>Subtotal</div>
-            <div className='cart-footer__price'>${price}</div>
+            <div className='cart-footer__subtotal'>
+                <div className='subtotal__label'>Subtotal</div>
+                <div className='subtotal__price'>${price}</div>
+            </div>
         </div>
 
     )
