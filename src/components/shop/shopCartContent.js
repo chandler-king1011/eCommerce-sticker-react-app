@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import CartProduct from './cartProduct';
 
-function CartFooter({className ,products}) {
+function CartFooter({className, products}) {
     const price = 7.96;
 
     return (
@@ -22,7 +22,7 @@ class CartContent extends Component {
     render() {
         const {className, products}  = this.props;
         let count = products.length;
-        let productsJSX = products.map(product => <CartProduct key={product} />);
+        let productsJSX = products.map(product => <CartProduct key={product.id} title={product.product.title} price={product.product.price} quantity={product.quantity} />);
 
     return (
         <div className={`${className} cart-content`}>
