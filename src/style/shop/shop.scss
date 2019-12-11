@@ -15,9 +15,23 @@
     &__products {
         width: minmax(100px, 1035px);
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 60px;
         grid-row-gap: 40px;
+        
+    }
+
+    .open-cart-button {
+        right: 0px;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+    &__cart {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
+
     }
 }
 

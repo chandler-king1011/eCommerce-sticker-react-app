@@ -4,6 +4,21 @@ import Quantity from '../quantity';
 import GreenPriceTag from '../greenPriceTag';
 
 class ShopProduct extends Component {
+    constructor() {
+        super();
+
+        this.handleAddToCart=this.handleAddToCart.bind(this);
+    }
+
+  handleAddToCart = () => {
+        const cart = document.getElementById('shop-cart');
+        if(cart.classList.contains('cart-hidden')) {
+            cart.classList.remove('cart-hidden');
+        } else {
+            cart.classList.add('cart-hidden');
+        }
+    }
+
     render() {
         const { title, description, price } = this.props;
         return (
@@ -24,7 +39,7 @@ class ShopProduct extends Component {
                             <Quantity quantity={1} className="shop-product__back__quantity" />
                         </div>
                         <div className="shop-product__back__button-wrapper">
-                            <div className="shop-product__back__add-to-cart">Add To Cart</div>
+                            <a className="shop-product__back__add-to-cart" onClick={this.handleAddToCart}>Add To Cart</a>
                         </div>
                     </div>
               </div>

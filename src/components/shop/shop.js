@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 import ShopCart from './shopCart';
+import CartButton from './cartButton';
 
 class Shop extends Component {
 
@@ -28,6 +30,15 @@ class Shop extends Component {
       return true;
   }
 
+  handleAddToCart() {
+    const cart = document.getElementById('shop-cart');
+    if(cart.classList.contains('cart-hidden')) {
+        cart.classList.remove('cart-hidden');
+    } else {
+        cart.classList.add('cart-hidden');
+    }
+  }
+
   onSubmit = (fields) => {
       event.preventDefault();
       this.props.filterProductsByQuery(fields.target[0].value);
@@ -37,6 +48,7 @@ class Shop extends Component {
     return(
         <div className="shop">
             <ShopCart className="shop__cart" />
+            <CartButton className="open-cart-button" icon={faCartPlus} onClick={this.handleAddToCart}/>
             <ShopSearchBar  handleSubmit={this.onSubmit}/>
             <div className="shop__products">
                 {this.props.filteredProducts.map(product => {

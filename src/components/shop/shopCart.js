@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import * as actions from '../../actions';
 import CartContent from './shopCartContent';
-
-
-
-
-function CartButton({className, icon}) {
-    return (
-        <div className={`${className} cart-button`}>
-            <FontAwesomeIcon icon={icon} />
-        </div>
-    )
-}
+import CartButton from './cartButton';
 
 
 
@@ -25,11 +14,20 @@ class ShopCart extends Component {
         this.props.fetchCartProducts();
     }
 
+     handleAddToCart() {
+        const cart = document.getElementById('shop-cart');
+        if(cart.classList.contains('cart-hidden')) {
+            cart.classList.remove('cart-hidden');
+        } else {
+            cart.classList.add('cart-hidden');
+        }
+    }
+
     render() {
         const { className } = this.props;
         return(
-            <div className={`${className} shop-cart`}>
-                <CartButton className='shop-cart__toggle' icon={faTimes} />
+            <div id="shop-cart" className={`${className} shop-cart cart-hidden`}>
+                <CartButton className='shop-cart__toggle' icon={faTimes} onClick={this.handleAddToCart} />
                 <CartContent className='shop-cart__content' products={this.props.cartProducts} />
             </div>
         )
