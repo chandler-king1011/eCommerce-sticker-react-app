@@ -18,8 +18,14 @@
 @import './shop/shop-cart.scss';
 @import './shop/cart-product.scss';
 @import './order/review.scss';
+@import './order/review-form.scss';
 
 body {
     font-family: "Open Sans";
     color: #808080;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
