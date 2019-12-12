@@ -1,0 +1,25 @@
+.review-product {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    
+
+    &__title {
+        font-size: 18px;
+        font-family: "Titillium Web";
+        color: #333;
+    }
+    &__quantity {
+        font-size: 18px;
+        font-weight: 600;
+        color: #666666;
+        justify-self: center;
+        
+    }
+
+    &__price {
+        justify-self: end;
+    }
+}

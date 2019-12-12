@@ -1,6 +1,13 @@
 .review-form {
+   
     &__products {
+        height: 400px;
         overflow-Y: scroll;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-rows: 1fr;
+        row-gap: 15px;
+
     }
     &__buttons {
         width: 410px;
