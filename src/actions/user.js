@@ -26,7 +26,8 @@ export function fetchCartProducts() {
                 title:"Javascript in the Browser",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
                 quantity: 2
         },
@@ -37,7 +38,8 @@ export function fetchCartProducts() {
                 title:"Graph Database",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.19,
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             quantity: 3
         }

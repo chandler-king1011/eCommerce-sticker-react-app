@@ -61,49 +61,56 @@ export function fetchShopProducts() {
                 title:"Javascript in the Browser",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 1,
                 title:"Graph Database",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.19,
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 2,
                 title:"Full Stack Development",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.25,
-                belongsTo: [0, 1, 4]
+                belongsTo: [0, 1, 4],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 3,
                 title:"User Interface Design",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 5.00,
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 4,
                 title:"Javascript Development",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 12.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 5,
                 title:"User Experience Design",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 1.99,
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 id: 6,
                 title:"Advanced OOP",
                 description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae non sapiente omnis ipsa id perspiciatis expedita, dolor eos error numquam at quasi eum necessitatibus.",
                 price: 2.19,
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
             }
         ]
     })

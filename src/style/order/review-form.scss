@@ -1,4 +1,7 @@
 .review-form {
+    &__products {
+        overflow-Y: scroll;
+    }
     &__buttons {
         width: 410px;
         display: flex;
