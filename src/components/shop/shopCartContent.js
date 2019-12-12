@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 import CartProduct from './cartProduct';
+import history from '../../history';
 
 function CartFooter({className, products}) {
     const price = 7.96;
 
     return (
         <div className={`${className} cart-footer`}>
-            <button className='cart-footer__checkout'>Checkout</button>
+            <button onClick={() => history.push('/order/review')} className='cart-footer__checkout'>Checkout</button>
             <div className='cart-footer__subtotal'>
                 <div className='subtotal__label'>Subtotal</div>
                 <div className='subtotal__price'>${price}</div>

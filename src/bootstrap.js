@@ -12,6 +12,7 @@ import SignIn from "./components/auth/signin";
 import SignUp from "./components/auth/signup";
 import Shop from "./components/shop/shop";
 import Account from "./components/account/account";
+import Review from "./components/order/review";
 import reducers from "./reducers";
 import history from './history';
 import "./style/main.scss";
@@ -32,6 +33,7 @@ function main() {
               <Route path='/signup' component={SignUp} />
               <Route path='/shop' component={Shop} />
               <Route path='/account' component={Account} />
+              <Route path='/order/review' component={Review} />
             </Switch>
         </Router>
       </Layout>
