@@ -1,4 +1,4 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS} from '../actions/types';
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART} from '../actions/types';
 
 const INITIAL_STATE = {
     purchases: [],
@@ -38,6 +38,29 @@ export default function(state=INITIAL_STATE, action) {
             return {
                 ...state,
                 cartProducts: action.payload
+            }
+        case ADD_ITEM_TO_CART: 
+            let exists = false;
+            const newCP = action.payload;
+            let cartProducts = [];
+            state.cartProducts.map(cartProduct => {
+                if (cartProduct.product.id == newCP.id) {
+                    exists = true;
+                    cartProduct.quantity += 1;
+                }
+                cartProducts.push(cartProduct);
+                })
+                if (exists == false) {
+                    cartProducts.push({
+                        id: state.cartProducts.length + 1,
+                        product: newCP,
+                        quantity: 1
+                    });
+                }
+
+            return {
+                ...state,
+                cartProducts: cartProducts
             }
 
         default: 

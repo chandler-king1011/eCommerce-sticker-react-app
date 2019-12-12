@@ -1,5 +1,11 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS } from './types';
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART } from './types';
 
+export function addItemToCart(item) {
+    return({
+        type: ADD_ITEM_TO_CART,
+        payload: item
+    });
+}
 
 export function fetchPurchaseDetails(id) {
     return({
