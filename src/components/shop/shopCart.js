@@ -24,11 +24,15 @@ class ShopCart extends Component {
     }
 
     render() {
+        let subtotal = 0;
+        this.props.cartProducts.map(cartProduct => {
+            subtotal += (cartProduct.quantity * cartProduct.product.price);
+        });
         const { className } = this.props;
         return(
             <div id="shop-cart" className={`${className} shop-cart cart-hidden`}>
                 <CartButton className='shop-cart__toggle' icon={faTimes} onClick={this.handleAddToCart} />
-                <CartContent className='shop-cart__content' products={this.props.cartProducts} />
+                <CartContent className='shop-cart__content' products={this.props.cartProducts} subtotal={subtotal} />
             </div>
         )
     }
