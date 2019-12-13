@@ -1,0 +1,43 @@
+.shipping-information {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+}
+
+
+.shipping-form {
+
+    input {
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        margin-bottom: 35px;
+    }
+
+    &__state-zip-wrapper {
+        width: 426px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            width: 200px;
+        }
+
+    }
+
+    &__border {
+        margin-top: 60px;
+        margin-bottom: 25px;
+        border-top: 1px solid #ccc;
+    }
+
+
+    &__buttons {
+        width: 426px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}

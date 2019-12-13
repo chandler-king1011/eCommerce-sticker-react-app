@@ -23,7 +23,7 @@ class ReviewForm extends Component {
             <div className="review-form__footer-wrapper">
                 <div className="review-form__buttons">
                     <Field className="review-form__" name="back" type="button" title="Back" component={FormButton} onClick={() => history.push('/shop')} gray={true} />
-                    <Field className="review-form__proceed" name="proceed" type="submit" title="Proceed to Checkout" component={FormButton} onClick={() => history.push('/signin')} />
+                    <Field className="review-form__proceed" name="proceed" type="submit" title="Proceed to Checkout" component={FormButton} onClick={() => history.push('/information/shipping')} />
                 </div>
                 <div className="review-form__details review-details">
                     <div className="review-details__subtotal">

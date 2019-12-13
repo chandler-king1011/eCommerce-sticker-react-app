@@ -13,6 +13,8 @@ import SignUp from "./components/auth/signup";
 import Shop from "./components/shop/shop";
 import Account from "./components/account/account";
 import Review from "./components/order/review";
+import ShippingInformation from "./components/information/shippingInformation";
+import PaymentInformation from "./components/information/paymentInformation";
 import reducers from "./reducers";
 import history from './history';
 import "./style/main.scss";
@@ -34,6 +36,8 @@ function main() {
               <Route path='/shop' component={Shop} />
               <Route path='/account' component={Account} />
               <Route path='/order/review' component={Review} />
+              <Route path='/information/shipping' component={ShippingInformation} />
+              <Route path='/information/payment' component={PaymentInformation} />
             </Switch>
         </Router>
       </Layout>
