@@ -43,5 +43,39 @@
         align-items: center;
     }
 
+}
 
+.review-form__footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .review-details {
+        margin-right: 100px;
+        
+        & > * {
+            display: grid;
+            grid-template-columns: [title-s] 1fr [title-e value-s] 1fr [value-e];
+            grid-template-rows: 1fr;
+            grid-gap: 60px;
+        }
+
+        &__title {
+            grid-column: title-s/title-e;
+            justify-self: end;
+            align-self: center;
+            font-size: 14px;
+        }
+        &__value {
+            grid-column: value-s/value-e;
+            font-size: 18px;
+            font-weight:600;
+            
+        }
+        &__total {
+            font-weight: 600;
+            color: #00CB79;
+            margin-top: 18px;
+        }
+    }
 }
