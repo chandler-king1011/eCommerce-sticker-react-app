@@ -97,6 +97,7 @@
         align-items: center;
         justify-content: center;
         transition: 0.3s ease-in-out;
+        cursor: pointer;
 
         &:active {
             transform: scale(0.97);

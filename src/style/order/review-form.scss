@@ -1,12 +1,39 @@
 .review-form {
+
+    &__legend {
+        font-size: 14px;
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 11px;
+        display: grid;
+        grid-template-columns: 80px [name-s] 1fr [name-e quantity-s] 1fr [quantity-e price-s] 1fr [price-e];
+        grid-template-rows: [s] 100% [e];
+
+        & > * {
+            grid-row: s/e;
+            justify-self: center;
+        }
+
+        &__name {
+            grid-column: name-s/name-e;
+        }
+
+        &__quantity {
+            grid-column: quantity-s/quantity-e;
+
+        }
+
+        &__price {
+            grid-column: price-s/price-e;
+        }
+    }
    
     &__products {
         height: 400px;
         overflow-Y: scroll;
         margin-bottom: 50px;
         display: grid;
-        grid-template-rows: 1fr;
         row-gap: 15px;
+        border-bottom: 1px solid #CCC;
 
     }
     &__buttons {
@@ -15,4 +42,6 @@
         justify-content: space-between;
         align-items: center;
     }
+
+
 }

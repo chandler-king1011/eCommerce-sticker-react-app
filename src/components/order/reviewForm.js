@@ -12,6 +12,11 @@ class ReviewForm extends Component {
 
     return(
         <form className={`${className} review-form`} onSubmit={handleSubmit}>
+            <div className="review-form__legend">
+                <div className="review-form__legend__name">Name</div>
+                <div className="review-form__legend__quantity">Quantity</div>
+                <div className="review-form__legend__price">Price</div>
+            </div>
             <ReviewProducts className="review-form__products" />
             <div className="review-form__buttons">
                 <Field className="review-form__" name="back" type="button" title="Back" component={FormButton} onClick={() => history.push('/shop')} gray={true} />
