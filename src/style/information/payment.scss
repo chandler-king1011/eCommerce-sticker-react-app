@@ -2,3 +2,57 @@
     grid-row: content-s/content-e;
     grid-column: s/e;
 }
+
+.payment-information__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  
+       
+    .payment-information__order-summary {
+        height: 150px;
+        width: 240px;
+        margin-bottom: 50px;
+        justify-self: center;
+    }
+    .payment-information__ship-to {
+        height: 150px;
+        width: 240px;
+
+        
+    }
+}
+
+.payment-form {
+    input {
+        margin-bottom: 20px;
+    }
+
+    &__exp-cvv {
+        width: 426px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            width: 200px;
+        }
+
+    }
+
+    &__border {
+        width: 426px;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        border-top: 1px solid #ccc;
+    }
+
+
+    &__buttons {
+        width: 426px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
