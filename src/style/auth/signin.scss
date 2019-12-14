@@ -24,13 +24,14 @@
     }
 
     &__border {
+        width: 426px;
         border-bottom: 1px solid #ccc;
         margin-bottom: 39px;
     }
     
     &__details {
         grid-row: 1/-1;
-        justify-self: end;
+        justify-self: start;
         align-self: start;
     }
 
