@@ -7,7 +7,8 @@ import {
     fetchUserPurchases,
     fetchPurchaseDetails,
     fetchCartProducts,
-    addItemToCart
+    addItemToCart,
+    signIn
 } from './user';
 import { 
     fetchShopCategories,
@@ -21,6 +22,7 @@ export {
     setNavbarLinks,
     changeNavbarActive,
     addItemToCart,
+    signIn,
     fetchUserPurchases,
     fetchCartProducts,
     fetchPurchaseDetails,

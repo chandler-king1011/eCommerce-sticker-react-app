@@ -1,6 +1,7 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART} from '../actions/types';
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART, AUTHENTICATE_USER} from '../actions/types';
 
 const INITIAL_STATE = {
+    user: {},
     purchases: [],
     purchaseDetail: {
             id: -1,
@@ -18,6 +19,12 @@ const INITIAL_STATE = {
 
 export default function(state=INITIAL_STATE, action) {
     switch(action.type) {
+        case AUTHENTICATE_USER: 
+            const { user } = action.payload;
+            return {
+                ...state,
+                user
+            }
         case SET_USER_PURCHASES:
             return{
                 ...state,

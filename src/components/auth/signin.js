@@ -6,6 +6,7 @@ import SignInForm from './signinForm';
 import pageTitle from '../pageTitle';
 
 
+
 class SignIn extends Component {
   
   componentDidMount() {
@@ -18,7 +19,9 @@ class SignIn extends Component {
       const fields = {};
       fields.email = field.target.children[0].children[1].value;
       fields.password = field.target.children[1].children[1].value;
-      console.log(fields);
+      this.props.signIn(fields.email, fields.password);
+      this.props.history.push('/account');
+
   }
 
   render() {

@@ -1,4 +1,20 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART } from './types';
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS, ADD_ITEM_TO_CART, AUTHENTICATE_USER } from './types';
+
+
+export function signIn({email, password}) {
+    return ({
+        type: AUTHENTICATE_USER,
+        payload: {
+            user: {
+                id: 0,
+                name: 'Chandler King',
+                address: '123 Any Street',
+                city: 'Salem',
+                state: 'UT'
+            }
+        }
+    })
+}
 
 export function addItemToCart(item) {
     return({
