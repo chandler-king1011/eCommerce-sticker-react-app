@@ -20,7 +20,7 @@ import history from './history';
 import "./style/main.scss";
 
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => F)(createStore)));
+const createStoreWithMiddleware = applyMiddleware()(compose((createStore)));
 
 
 
